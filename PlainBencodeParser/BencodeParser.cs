@@ -75,10 +75,10 @@ public class BencodeParser
                 break;
             }
 
-            var (key, i1) = Decode(s.Substring(index));
-            var (value, i2) = Decode(s.Substring(index + i1));
+            var (key, charsReadKey) = Decode(s.Substring(index));
+            var (value, charsReadValue) = Decode(s.Substring(index + charsReadKey));
             result[key] = value;
-            index += (i1 + i2);
+            index += (charsReadKey + charsReadValue);
         }
 
         return (result, index);
