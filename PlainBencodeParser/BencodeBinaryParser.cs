@@ -100,6 +100,12 @@ public class BencodeBinaryParser
                     index += len;
                     return (dictVal, index);
                 }
+                case LIST_START:
+                {
+                    var (listVal, len) = DecodeList(data.Skip(index).ToList());
+                    index += len;
+                    return (listVal, index);
+                }
                 default:
                 {
                     var (strVal, len) = DecodeByteString(data.Skip(index).ToList());

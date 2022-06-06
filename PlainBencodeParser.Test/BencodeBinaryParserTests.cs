@@ -121,4 +121,5 @@ public class BencodeBinaryParserTests
         Assert.AreEqual("spam", first);
         Assert.AreEqual("eggs", second);
     }
+    
 }
