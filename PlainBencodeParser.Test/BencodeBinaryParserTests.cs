@@ -121,5 +121,15 @@ public class BencodeBinaryParserTests
         Assert.AreEqual("spam", first);
         Assert.AreEqual("eggs", second);
     }
-    
+
+    [Test]
+    public void EmptyListParsing_Works()
+    {
+        var b = new BencodeBinaryParser();
+        var data = Encoding.ASCII.GetBytes("le");
+        
+        var (result, charsRead) = b.DecodeList(data.ToList());
+        Assert.AreEqual(0, result.Count);
+        Assert.AreEqual(2, charsRead);
+    }
 }
