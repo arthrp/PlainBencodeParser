@@ -71,7 +71,7 @@ public class BencodeBinaryParserTests
         Assert.AreEqual(1, result.Count);
         Assert.AreEqual("foo", result.Keys.ElementAt(0));
 
-        var val = result["foo"] as int?;
+        var val = result["foo"] as long?;
 
         Assert.AreEqual(900, val.Value);
     }
@@ -91,7 +91,7 @@ public class BencodeBinaryParserTests
         var text = Encoding.ASCII.GetString(fooVal);
         Assert.AreEqual("bar", text);
 
-        var spamVal = result["spam"] as int?;
+        var spamVal = result["spam"] as long?;
         Assert.AreEqual(900, spamVal.Value);
     }
 
