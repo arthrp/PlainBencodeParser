@@ -10,14 +10,14 @@ public class BencodeBinaryParser
     private const byte LIST_START = 0x6C; // l
     private const byte END = 0x65; // e
 
-    public (int, int) DecodeInt(List<byte> data)
+    public (long, int) DecodeInt(List<byte> data)
     {
         var endIndex = data.IndexOf(END);
         var intLength = endIndex - 1;
         var sublist = data.Skip(1).Take(intLength).ToArray();
 
         var str = Encoding.ASCII.GetString(sublist);
-        return (int.Parse(str), endIndex+1);
+        return (long.Parse(str), endIndex+1);
     }
 
     public (byte[], int) DecodeByteString(List<byte> data)
