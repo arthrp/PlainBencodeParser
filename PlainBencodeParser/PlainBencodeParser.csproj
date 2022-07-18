@@ -8,7 +8,7 @@
 
     <PropertyGroup>
         <PackageId>PlaneBencodeParser</PackageId>
-        <Version>1.0.1-beta.1</Version>
+        <Version>1.0.1</Version>
         <Authors>arthrp</Authors>
         <TargetFramework>net6.0</TargetFramework>
         <Title>Plane Bencode parser</Title>
