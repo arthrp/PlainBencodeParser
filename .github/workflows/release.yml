@@ -19,7 +19,7 @@ jobs:
         run: dotnet build
       - name: Pack
         run: |
-          dotnet pack PlainBencodeParser/PlainBencodeParser.csproj -p:NuspecFile=PlaneBencodeParser.nuspec --output out
+          dotnet pack PlainBencodeParser/PlainBencodeParser.csproj --output out
           zip -r release.zip out
       - name: Upload
         uses: softprops/action-gh-release@v1
