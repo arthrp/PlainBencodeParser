@@ -7,14 +7,15 @@
     </PropertyGroup>
 
     <PropertyGroup>
-        <PackageId>PlaneBencodeParser</PackageId>
-        <Version>1.0.1</Version>
+        <PackageId>PlainBencodeParser</PackageId>
+        <Version>1.0.2</Version>
         <Authors>arthrp</Authors>
         <TargetFramework>net6.0</TargetFramework>
         <Title>Plane Bencode parser</Title>
         <Description>A very simple Bencode parser</Description>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
         <PackageProjectUrl>https://github.com/arthrp/PlainBencodeParser/</PackageProjectUrl>
+        <PackageTags>Bencode;Parser</PackageTags>
     </PropertyGroup>
 
 </Project>
